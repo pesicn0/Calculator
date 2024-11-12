@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="calculator-app-main/images/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Frontend Mentor | Calculator app</title>
+</head>
+
+<body class="tema1">
+    <div class="container">
+        <div class="header">
+            <h3>calc</h3>
+            <div class="themes-wrapper">
+                <h5>THEME</h5>
+                <div class="theme-select">
+                    <div class="themes">
+                        <h6>1</h6>
+                        <h6>2</h6>
+                        <h6>3</h6>
+                    </div>
+                    <div class="theme-btns">
+                        <button onclick="switchtheme('tema1')" id="theme1" class="theme-btn"></button>
+                        <button onclick="switchtheme('tema2')" id="theme2" class="theme-btn"></button>
+                        <button onclick="switchtheme('tema3')" id="theme3" class="theme-btn"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <input type="text" id="result" class="result">
+        <div class="grid-container">
+            <input type="button" value="7" class="btn">
+            <input type="button" value="8" class="btn">
+            <input type="button" value="9" class="btn">
+            <input type="button" value="DEL" id="del-btn" class="theme1-btn" onclick="deletecharacter()">
+            <input type="button" value="4" class="btn">
+            <input type="button" value="5" class="btn">
+            <input type="button" value="6" class="btn">
+            <input type="button" value="+" class="operation">
+            <input type="button" value="1" class="btn">
+            <input type="button" value="2" class="btn">
+            <input type="button" value="3" class="btn">
+            <input type="button" value="-" class="operation">
+            <input type="button" value="." class="btn">
+            <input type="button" value="0" class="btn">
+            <input type="button" value="/" class="operation">
+            <input type="button" value="*" class="operation">
+            <input type="button" value="RESET" id="reset-btn" class="" onclick="reset()">
+            <input type="button" value="=" id="calculate-btn" class="" onclick="solve()">
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

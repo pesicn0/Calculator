@@ -1,0 +1,208 @@
+:root {
+    --main-background-color: hsl(222, 26%, 31%);
+    --keypad-background-color: hsl(223, 31%, 20%);
+    --screen-background-color: hsl(224, 36%, 15%);
+    --main-key-background-color: hsl(30, 25%, 89%);
+    --main-key-shadow-color: hsl(28, 16%, 65%);
+    --sum-key-background-color: hsl(6, 63%, 50%);
+    --sum-key-shadow-color: hsl(6, 70%, 34%);
+    --two-key-background-color: hsl(225, 21%, 49%);
+    --two-key-shadow-color: hsl(224, 28%, 35%);
+    --main-text-color: hsl(221, 14%, 31%);
+    --other-text-color: hsl(0, 0%, 100%);
+}
+
+.tema1 {
+    --main-background-color: hsl(222, 26%, 31%);
+    --keypad-background-color: hsl(223, 31%, 20%);
+    --screen-background-color: hsl(224, 36%, 15%);
+    --main-key-background-color: hsl(30, 25%, 89%);
+    --main-key-shadow-color: hsl(28, 16%, 65%);
+    --sum-key-background-color: hsl(6, 63%, 50%);
+    --sum-key-shadow-color: hsl(6, 70%, 34%);
+    --two-key-background-color: hsl(225, 21%, 49%);
+    --two-key-shadow-color: hsl(224, 28%, 35%);
+    --main-text-color: hsl(221, 14%, 31%);
+    --other-text-color: hsl(0, 0%, 100%);
+}
+
+.tema2 {
+    --main-background-color: hsl(0, 0%, 90%);
+    --keypad-background-color: hsl(0, 5%, 81%);
+    --screen-background-color: hsl(0, 0%, 93%);
+    --two-key-background-color: hsl(185, 42%, 37%);
+    --two-key-shadow-color: hsl(185, 58%, 25%);
+    --sum-key-background-color: hsl(25, 98%, 40%);
+    --sum-key-shadow-color: hsl(25, 99%, 27%);
+    --main-key-background-color: hsl(45, 7%, 89%);
+    --main-key-shadow-color: hsl(35, 11%, 61%);
+    --main-text-color: hsl(60, 10%, 19%);
+    --other-text-color: hsl(0, 0%, 100%);
+}
+
+.tema3 {
+    --main-background-color: hsl(268, 75%, 9%);
+    --keypad-background-color: hsl(268, 71%, 12%);
+    --screen-background-color: hsl(268, 71%, 12%);
+    --main-key-background-color: hsl(281, 89%, 26%);
+    --main-key-shadow-color: hsl(285, 91%, 52%);
+    --sum-key-background-color: hsl(176, 100%, 44%);
+    --sum-key-shadow-color: hsl(177, 92%, 70%);
+    --two-key-background-color: hsl(268, 47%, 21%);
+    --two-key-shadow-color: hsl(290, 70%, 36%);
+    --main-text-color: hsl(52, 100%, 62%);
+    --other-text-color: hsl(0, 0%, 100%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    background-color: var(--main-background-color);
+}
+
+.header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    color: var(--main-text-color);
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.themes-wrapper {
+    display: flex;
+    align-items: end;
+}
+
+.themes-select {
+    max-width: 10px;
+}
+
+.theme-btns {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.themes {
+    display: flex;
+    justify-content: space-around;
+}
+
+.theme-btn {
+    padding: 7px;
+    border: none;
+    border-radius: 50%;
+    background-color: transparent;
+}
+
+h5 {
+    font-size: 10px;
+    margin-right: 10px;
+}
+
+#theme1 {
+    background-color: var(--sum-key-background-color);
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.grid-container input {
+    text-align: center;
+    padding: 5px 10px;
+    font-size: 30px;
+}
+
+#reset-btn {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+#calculate-btn {
+    grid-column-start: 3;
+    grid-column-end: 5;
+}
+
+#switch-theme {
+    padding: 7px;
+    border-radius: 50%;
+    border: none;
+}
+
+.grid-container {
+    background-color: var(--keypad-background-color);
+}
+
+.result {
+    background-color: var(--screen-background-color);
+    color: var(--main-text-color);
+    border: none;
+    border-radius: 10px;
+    font-size: 32px;
+    padding: 30px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    border: none;
+    background-color: var(--main-key-background-color);
+    border-bottom: 3px solid var(--main-key-shadow-color);
+    border-radius: 5px;
+    color: var(--main-text-color);
+}
+
+.operation {
+    border: none;
+    background-color: var(--main-key-background-color);
+    border-bottom: 3px solid var(--main-key-shadow-color);
+    border-radius: 5px;
+    color: var(--main-text-color);
+}
+
+#del-btn {
+    border: none;
+    background-color: var(--two-key-background-color);
+    border-bottom: 3px solid var(--two-key-shadow-color);
+    border-radius: 5px;
+    color: var(--other-text-color);
+}
+
+#reset-btn {
+    border: none;
+    background-color: var(--two-key-background-color);
+    border-bottom: 3px solid var(--two-key-shadow-color);
+    border-radius: 5px;
+    color: var(--other-text-color);
+}
+
+#calculate-btn {
+    border: none;
+    background-color: var(--sum-key-background-color);
+    border-bottom: 3px solid var(--sum-key-shadow-color);
+    border-radius: 5px;
+    color: var(--other-text-color);
+}
+
+.tema1 .header {
+    color: var(--other-text-color);
+}
+
+.tema1 .result {
+    color: var(--other-text-color);
+}
+
